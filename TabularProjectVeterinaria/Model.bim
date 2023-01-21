@@ -1,0 +1,343 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "es-BO",
+    "dataSources": [
+      {
+        "name": "SqlServer DESKTOP-S5G74PE VeterinariaDW",
+        "connectionString": "Provider=SQLNCLI11;Data Source=DESKTOP-S5G74PE;Initial Catalog=VeterinariaDW;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "ClientesDW",
+        "columns": [
+          {
+            "name": "CodigoCliente",
+            "dataType": "string",
+            "sourceColumn": "CodigoCliente",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ApellidoFamilia",
+            "dataType": "string",
+            "sourceColumn": "ApellidoFamilia",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Direccion",
+            "dataType": "string",
+            "sourceColumn": "Direccion",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Zona",
+            "dataType": "string",
+            "sourceColumn": "Zona",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CuentaBancaria",
+            "dataType": "string",
+            "sourceColumn": "CuentaBancaria",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Telefono",
+            "dataType": "string",
+            "sourceColumn": "Telefono",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ClientesDW",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[ClientesDW].* FROM [dbo].[ClientesDW] ",
+              "dataSource": "SqlServer DESKTOP-S5G74PE VeterinariaDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[ClientesDW].* FROM [dbo].[ClientesDW] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "ClientesDW"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "MascotasDW",
+        "columns": [
+          {
+            "name": "CodMascota",
+            "dataType": "string",
+            "sourceColumn": "CodMascota",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Alias",
+            "dataType": "string",
+            "sourceColumn": "Alias",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Especie",
+            "dataType": "string",
+            "sourceColumn": "Especie",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Raza",
+            "dataType": "string",
+            "sourceColumn": "Raza",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Color",
+            "dataType": "string",
+            "sourceColumn": "Color",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Edad",
+            "dataType": "int64",
+            "sourceColumn": "Edad",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Peso",
+            "dataType": "int64",
+            "sourceColumn": "Peso",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "MascotasDW",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[MascotasDW].* FROM [dbo].[MascotasDW] ",
+              "dataSource": "SqlServer DESKTOP-S5G74PE VeterinariaDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[MascotasDW].* FROM [dbo].[MascotasDW] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "MascotasDW"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "TiemposDW",
+        "columns": [
+          {
+            "name": "Año",
+            "dataType": "int64",
+            "sourceColumn": "Año",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Mes",
+            "dataType": "int64",
+            "sourceColumn": "Mes",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Dia",
+            "dataType": "int64",
+            "sourceColumn": "Dia",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Estacion",
+            "dataType": "string",
+            "sourceColumn": "Estacion",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "TiemposDW",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[TiemposDW].* FROM [dbo].[TiemposDW] ",
+              "dataSource": "SqlServer DESKTOP-S5G74PE VeterinariaDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[TiemposDW].* FROM [dbo].[TiemposDW] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "TiemposDW"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "VacunasDW",
+        "columns": [
+          {
+            "name": "CodVacuna",
+            "dataType": "string",
+            "sourceColumn": "CodVacuna",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "NombreVac",
+            "dataType": "string",
+            "sourceColumn": "NombreVac",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "EnfermedadPrev",
+            "dataType": "string",
+            "sourceColumn": "EnfermedadPrev",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VacunasDW",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[VacunasDW].* FROM [dbo].[VacunasDW] ",
+              "dataSource": "SqlServer DESKTOP-S5G74PE VeterinariaDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[VacunasDW].* FROM [dbo].[VacunasDW] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VacunasDW"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "VisitasDW",
+        "columns": [
+          {
+            "name": "FechaConsulta",
+            "dataType": "dateTime",
+            "sourceColumn": "FechaConsulta",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Peso",
+            "dataType": "int64",
+            "sourceColumn": "Peso",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "MontoAtencion",
+            "dataType": "decimal",
+            "sourceColumn": "MontoAtencion",
+            "formatString": "\"Bs\"#,0.00;-\"Bs\"#,0.00;\"Bs\"#,0.00",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"16394\" DisplayName=\"Bs Spanish (Bolivia)\" Symbol=\"Bs\" PositivePattern=\"0\" NegativePattern=\"1\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Vacuna",
+            "dataType": "string",
+            "sourceColumn": "Vacuna",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Medicacion",
+            "dataType": "string",
+            "sourceColumn": "Medicacion",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CodMascota",
+            "dataType": "string",
+            "sourceColumn": "CodMascota",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "VisitasDW",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[VisitasDW].* FROM [dbo].[VisitasDW] ",
+              "dataSource": "SqlServer DESKTOP-S5G74PE VeterinariaDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[VisitasDW].* FROM [dbo].[VisitasDW] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "VisitasDW"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
